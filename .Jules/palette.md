@@ -1,0 +1,3 @@
+## 2025-06-25 - Interactive elements should use semantic tags
+**Learning:** Found a common pattern where `div` elements are used with click handlers as buttons (e.g., hamburger menus). This prevents keyboard navigation and screen readers from identifying it properly as an interactive element and reading its state.
+**Action:** Replaced the generic `div` with a semantic `<button>`, resetting default button styles via CSS. Added `aria-expanded` attributes and managed them via JavaScript to keep screen readers informed of the state, and added a global `:focus-visible` styling to improve visual indication for keyboard users.
