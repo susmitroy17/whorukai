@@ -1,0 +1,3 @@
+## 2024-05-17 - Hamburger Menu Accessibility
+**Learning:** Custom interactive elements (like `<div>` hamburger menus) often lack native keyboard focus, default interaction behaviors (Enter/Space to click), and state communication (`aria-expanded`) out of the box, leading to a poor experience for keyboard and screen reader users.
+**Action:** When building or fixing custom toggles (like a hamburger menu), use a semantic `<button type="button">` element instead of a `<div>`. Always pair it with dynamic `aria-expanded` attributes, `aria-controls`, and visible `:focus-visible` styles to ensure it is fully accessible to all users.
