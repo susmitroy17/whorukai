@@ -1,0 +1,3 @@
+## 2025-10-24 - Hamburger Menu Semantic Accessibility
+**Learning:** Custom interactive elements (like the `.navbar__hamburger` menu) were built using `<div>` tags instead of semantic `<button>` tags. This anti-pattern prevents native keyboard focus and prevents the element from being activated by the Enter or Spacebar keys by default.
+**Action:** When creating or modifying custom interactive elements (like custom toggles or hamburger menus), always use semantic `<button>` tags to ensure native keyboard accessibility and correct screen reader announcement, rather than adding `cursor: pointer` to a generic `<div>`. Ensure global focus visibility states exist.
