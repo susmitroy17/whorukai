@@ -1,0 +1,8 @@
+127.0.0.1 - - [31/Aug/2026 01:24:44] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [31/Aug/2026 01:24:44] "GET /Portfolio.png HTTP/1.1" 200 -
+127.0.0.1 - - [31/Aug/2026 01:25:00] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [31/Aug/2026 01:25:00] "GET /Portfolio.png HTTP/1.1" 200 -
+127.0.0.1 - - [31/Aug/2026 01:25:16] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [31/Aug/2026 01:25:16] "GET /Portfolio.png HTTP/1.1" 200 -
+127.0.0.1 - - [31/Aug/2026 01:25:55] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [31/Aug/2026 01:25:55] "GET /Portfolio.png HTTP/1.1" 200 -
