@@ -1,0 +1,3 @@
+## 2025-05-18 - Accessible Off-Canvas Menus
+**Learning:** Off-screen navigation menus often trap screen readers and keyboard users if not explicitly hidden from the accessibility tree. Using a non-semantic element (like `<div>`) for a hamburger toggle prevents keyboard activation and semantic meaning.
+**Action:** Always use a `<button>` with `aria-expanded` and `aria-controls` for custom toggles. Use the HTML `inert` attribute on off-screen containers to remove them (and all interactive children) from the tab order and accessibility tree until they are visually opened. Provide explicit `:focus-visible` styles for the toggle button.

@@ -242,6 +242,14 @@ body {
   cursor: pointer;
   width: 32px;
   padding: 4px 0;
+  background: transparent;
+  border: none;
+}
+
+.navbar__hamburger:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 2px;
 }
 
 .navbar__hamburger span {
@@ -1124,7 +1132,7 @@ footer p {
 </div>
 
 <!-- Full-Screen Menu Overlay -->
-<div class="menu-overlay" id="menuOverlay">
+<div class="menu-overlay" id="menuOverlay" inert>
   <nav class="menu-overlay__nav">
     <a href="#home" class="menu-overlay__link" onclick="closeMenu()">Home</a>
     <a href="#about" class="menu-overlay__link" onclick="closeMenu()">About</a>
@@ -1141,9 +1149,9 @@ footer p {
 <!-- Navbar -->
 <nav class="navbar">
   <a href="#home" class="navbar__logo">Susmit Roy</a>
-  <div class="navbar__hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">
+  <button class="navbar__hamburger" id="hamburger" onclick="toggleMenu()" aria-expanded="false" aria-controls="menuOverlay" aria-label="Toggle Navigation Menu">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
 
 <!-- Page Content -->
@@ -1519,8 +1527,12 @@ let menuOpen = false;
 
 function toggleMenu() {
   menuOpen = !menuOpen;
-  if (menuOverlay) menuOverlay.classList.toggle('open', menuOpen);
+  if (menuOverlay) {
+    menuOverlay.classList.toggle('open', menuOpen);
+    menuOverlay.inert = !menuOpen;
+  }
   if (hamburger) {
+    hamburger.setAttribute('aria-expanded', menuOpen);
     const spans = hamburger.querySelectorAll('span');
     if (menuOpen) {
       spans[0].style.transform = 'translateY(7.5px) rotate(45deg)';
@@ -1538,8 +1550,12 @@ function toggleMenu() {
 
 function closeMenu() {
   menuOpen = false;
-  if (menuOverlay) menuOverlay.classList.remove('open');
+  if (menuOverlay) {
+    menuOverlay.classList.remove('open');
+    menuOverlay.inert = true;
+  }
   if (hamburger) {
+    hamburger.setAttribute('aria-expanded', 'false');
     const spans = hamburger.querySelectorAll('span');
     spans[0].style.transform = '';
     spans[1].style.opacity = '';
@@ -1552,6 +1568,7 @@ function closeMenu() {
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && menuOpen) {
     closeMenu();
+    if (hamburger) hamburger.focus();
   }
 });
 
