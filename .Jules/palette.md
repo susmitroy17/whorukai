@@ -1,0 +1,3 @@
+## 2025-02-14 - Native button elements for keyboard accessibility
+**Learning:** Found a common pattern where interactive `div` elements are missing native keyboard/state support in this vanilla HTML architecture, making them inaccessible to screen readers and keyboard users. Custom focus styling also needs to be explicitly enabled without affecting mouse interactions.
+**Action:** Always use native `<button>` tags instead of `div` for interactive toggles. Map proper `aria-expanded` and `aria-controls` states bound to component JavaScript state, reset default browser styles explicitly, and implement global `:focus-visible` CSS rules mapped to existing theme tokens.
