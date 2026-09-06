@@ -1,0 +1,3 @@
+## 2026-09-06 - Focus Visibility with Custom Cursors
+**Learning:** When using custom cursors that disable native cursor interaction (e.g. `cursor: none`), browser default focus rings can sometimes be less visible or obscure the keyboard navigation experience. It is critical to enforce explicit `:focus-visible` styles on all interactive elements to ensure accessibility for keyboard users remains intact.
+**Action:** Enforce `:focus-visible` with high-contrast outlines (like `outline: 2px solid var(--accent)`) whenever relying heavily on custom mouse interactions or disabling native pointers globally.
