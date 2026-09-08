@@ -1,0 +1,3 @@
+## 2025-05-18 - Keyboard Accessibility for Custom Interactive Elements
+**Learning:** In a heavily stylized custom portfolio site, div-based non-semantic interactive components (like a hamburger menu) often forget essential keyboard and screen-reader considerations, rendering them useless for keyboard users.
+**Action:** Always map custom interactive elements (e.g., custom hamburger icon `div`) with `role="button"`, `tabindex="0"`, and keyboard handlers (`onkeydown="if(event.key === 'Enter' || event.key === ' ') { ... }"`) to mimic standard `<button>` behavior. Additionally, a global `:focus-visible` rule is critical for these interactive elements so that tabbing is clear to sighted keyboard users.
