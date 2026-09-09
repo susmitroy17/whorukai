@@ -1,0 +1,3 @@
+## 2025-10-24 - Semantic controls for hamburger menus
+**Learning:** Found that custom div-based hamburger menus lose native keyboard accessibility (tab focus and space/enter activation) and miss implicit ARIA semantics.
+**Action:** Always prefer native `<button>` tags over `<div>` for toggle controls to inherit default accessibility behaviors, and pair them with `aria-expanded` attributes to communicate state to screen readers.
