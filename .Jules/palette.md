@@ -1,0 +1,3 @@
+## 2026-09-10 - Semantic Custom Controls and Focus States
+**Learning:** Using semantic HTML elements like `<button>` instead of `<div>` for custom controls provides native keyboard accessibility (tab focus, enter/space activation) without requiring custom JavaScript event listeners. Additionally, explicitly defining `:focus-visible` styles ensures users navigating via keyboard always have a clear visual indicator of their current position.
+**Action:** Always favor native HTML elements for interactive controls. If custom styling is needed, apply button reset CSS (`background: transparent; border: none;`) to maintain the visual design while gaining native accessibility benefits. Ensure a global `:focus-visible` outline is present in the CSS.
