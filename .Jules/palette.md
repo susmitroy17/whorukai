@@ -1,0 +1,3 @@
+## 2026-09-11 - Div-based Buttons and Missing Focus Indicators
+**Learning:** Found a pattern of interactive elements (like the hamburger menu) implemented as `div` tags with click handlers, lacking native keyboard focusability and ARIA attributes. Additionally, the site lacked global `:focus-visible` styles, making keyboard navigation difficult.
+**Action:** Always verify custom interactive components are built with semantic elements (e.g., `<button>`) or have `tabindex="0"` and appropriate ARIA roles. Ensure a global `:focus-visible` outline is present for keyboard accessibility.
