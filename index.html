@@ -242,6 +242,8 @@ body {
   cursor: pointer;
   width: 32px;
   padding: 4px 0;
+  background: transparent;
+  border: none;
 }
 
 .navbar__hamburger span {
@@ -256,6 +258,11 @@ body {
 .navbar__hamburger span:nth-child(3) { width: 90%; }
 .navbar__hamburger:hover span:nth-child(2) { width: 100%; }
 .navbar__hamburger:hover span:nth-child(3) { width: 100%; }
+
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
 
 /* Menu Overlay */
 .menu-overlay {
@@ -1141,9 +1148,9 @@ footer p {
 <!-- Navbar -->
 <nav class="navbar">
   <a href="#home" class="navbar__logo">Susmit Roy</a>
-  <div class="navbar__hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">
+  <button class="navbar__hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
 
 <!-- Page Content -->

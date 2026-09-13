@@ -1,0 +1,3 @@
+## 2024-05-18 - Semantic HTML and Focus States
+**Learning:** Using semantic HTML (e.g., `<button>` instead of `<div>`) ensures native keyboard accessibility (focusability and Enter/Space activation) for custom UI elements like hamburger menus without needing additional ARIA roles or JavaScript event listeners. Global `:focus-visible` styles are critical for providing clear visual feedback to keyboard users without impacting mouse/touch interactions.
+**Action:** Always prefer native semantic elements for interactive components and ensure global focus-visible styles are defined using design system tokens.
