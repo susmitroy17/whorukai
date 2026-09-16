@@ -1,0 +1,3 @@
+## 2025-05-18 - Native Controls vs Div Click Handlers
+**Learning:** Using generic HTML elements like `<div>` for interactive controls (e.g., hamburger menus) strips away native keyboard accessibility. Keyboard users cannot tab to the element or activate it with the Enter/Space key, and screen readers miss the element's interactive role by default.
+**Action:** Always prefer native interactive elements like `<button>` over `<div>` with `onclick` handlers for UI controls. Use `aria-expanded` and `focus-visible` styles to provide screen reader state context and visual keyboard focus indicators, ensuring the interface is navigable for all users.
