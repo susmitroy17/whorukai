@@ -1,0 +1,3 @@
+## 2025-05-18 - Hamburger Menu Accessibility
+**Learning:** Found a `<div class="navbar__hamburger">` handling critical navigation toggle functionality. Screen readers wouldn't announce this as a button, and keyboard users could not tab to it, completely blocking site navigation for those users.
+**Action:** Changed to semantic `<button>` element with `aria-expanded="false"`, reset default button CSS (`background: none; border: none; outline: none;`), added `:focus-visible` for clear keyboard focus indication, and implemented JS logic to dynamically update `aria-expanded` based on the menu state. When dealing with interactive elements acting as toggles, semantic HTML (`<button>`) and ARIA state attributes (`aria-expanded`) are non-negotiable for accessibility.
