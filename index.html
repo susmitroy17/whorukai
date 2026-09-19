@@ -22,6 +22,11 @@
   padding: 0;
 }
 
+:focus-visible {
+  outline: 2px dashed var(--accent);
+  outline-offset: 4px;
+}
+
 :root {
   /* Rich Crimson & Dark Palette */
   --black: #140205;
@@ -242,6 +247,8 @@ body {
   cursor: pointer;
   width: 32px;
   padding: 4px 0;
+  background: transparent;
+  border: none;
 }
 
 .navbar__hamburger span {
@@ -1141,9 +1148,9 @@ footer p {
 <!-- Navbar -->
 <nav class="navbar">
   <a href="#home" class="navbar__logo">Susmit Roy</a>
-  <div class="navbar__hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">
+  <button class="navbar__hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
 
 <!-- Page Content -->
