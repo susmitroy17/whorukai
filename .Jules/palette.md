@@ -1,0 +1,3 @@
+## 2024-05-24 - Semantic Navigation Elements
+**Learning:** Using non-semantic elements like `<div>` for interactive components (e.g., hamburger menus) hides them from screen readers and keyboard navigation (Tab order). Even with `cursor: pointer` and `onclick`, they lack native accessibility features. Global focus states are also critical for keyboard users to know where they are.
+**Action:** Always use semantic `<button>` elements for interactive controls, and ensure global `:focus-visible` styles are set using existing design variables to provide clear visual feedback for keyboard navigation.
