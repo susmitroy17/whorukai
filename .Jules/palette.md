@@ -1,0 +1,3 @@
+## 2024-05-24 - Semantic Buttons for Interactive Elements
+**Learning:** This project's static HTML/CSS approach relies heavily on custom `div` elements for interactive components (like the hamburger menu) because default button styling conflicts with the design language.
+**Action:** When making interactive elements accessible in this codebase, convert `div` to `<button>` and explicitly strip default styles (`background: transparent; border: none; padding: 0; outline: none;`) rather than attempting to make `div` accessible via ARIA and tabindex, ensuring native keyboard support and ARIA state capabilities without visual regressions.
