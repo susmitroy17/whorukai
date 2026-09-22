@@ -111,6 +111,16 @@ body {
   transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
 }
 
+/* Accessibility: Focus visible styles for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+a:focus-visible, button:focus-visible, .project-card:focus-visible, .resource-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
 /* ================================================================
    2. CINEMATIC REVEAL CURTAIN & LOADER
    ================================================================ */
@@ -242,6 +252,8 @@ body {
   cursor: pointer;
   width: 32px;
   padding: 4px 0;
+  background: transparent;
+  border: none;
 }
 
 .navbar__hamburger span {
@@ -1141,9 +1153,9 @@ footer p {
 <!-- Navbar -->
 <nav class="navbar">
   <a href="#home" class="navbar__logo">Susmit Roy</a>
-  <div class="navbar__hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">
+  <button class="navbar__hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle Navigation Menu" aria-expanded="false">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
 
 <!-- Page Content -->
@@ -1521,6 +1533,7 @@ function toggleMenu() {
   menuOpen = !menuOpen;
   if (menuOverlay) menuOverlay.classList.toggle('open', menuOpen);
   if (hamburger) {
+    hamburger.setAttribute('aria-expanded', menuOpen);
     const spans = hamburger.querySelectorAll('span');
     if (menuOpen) {
       spans[0].style.transform = 'translateY(7.5px) rotate(45deg)';
@@ -1540,6 +1553,7 @@ function closeMenu() {
   menuOpen = false;
   if (menuOverlay) menuOverlay.classList.remove('open');
   if (hamburger) {
+    hamburger.setAttribute('aria-expanded', 'false');
     const spans = hamburger.querySelectorAll('span');
     spans[0].style.transform = '';
     spans[1].style.opacity = '';
