@@ -1,0 +1,3 @@
+## 2026-09-30 - Converting generic div hamburgers to semantic buttons
+**Learning:** When converting custom interactive elements like hamburger menus from `<div>` to semantic `<button>`, it's critical not only to apply CSS resets (`background: transparent; border: none; outline: none;`) to avoid visual regressions, but also to ensure dynamic ARIA states (`aria-expanded`) are programmatically updated in JS to reflect the visual state.
+**Action:** Always update JS interaction handlers to map `menuOpen` variables to `aria-expanded="true/false"` attributes when upgrading structural HTML elements to semantic alternatives.
