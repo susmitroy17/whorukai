@@ -1,0 +1,3 @@
+## 2025-01-20 - Converting visual div buttons to semantic HTML buttons
+**Learning:** When replacing `<div role="button">` or click-bound `<div>` elements with semantic `<button>` tags for accessibility improvements, browsers will aggressively apply user-agent default styles (like system backgrounds, ugly borders, and default outlines) that can destroy a custom-designed UI.
+**Action:** Always explicitly strip out default button styles (`background: transparent; border: none; outline: none;`) when doing semantic replacements to prevent visual regressions, while remembering to re-introduce accessible `:focus-visible` states that match the design tokens.
