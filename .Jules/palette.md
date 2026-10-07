@@ -1,0 +1,3 @@
+## 2024-10-07 - Programmatic aria-expanded toggling for Menu Buttons
+**Learning:** When converting dynamic menu state `div`s to `<button>` elements to improve accessibility, setting `aria-expanded` statically in HTML is insufficient. Screen readers require the state to actively change; therefore, `aria-expanded` must be programmatically toggled between `'true'` and `'false'` (as strings) within the associated JavaScript menu toggle logic.
+**Action:** When migrating interactive elements like hamburger menus from semantic-less tags (`div`/`span`) to standard `<button>`s, ensure both `aria-expanded` defaults in HTML are set AND script handlers update this attribute correctly matching visual state.
