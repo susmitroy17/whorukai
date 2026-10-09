@@ -1,0 +1,3 @@
+## 2026-10-09 - Accessible Menu Button State Management
+**Learning:** When converting a custom `div`-based hamburger menu to a semantic `<button>`, setting the `aria-expanded` attribute directly as boolean values (true/false) might not be read correctly by screen readers. The attribute must be toggled programmatically between the string values `'true'` and `'false'` to ensure proper accessibility state changes.
+**Action:** Always ensure accessibility attributes like `aria-expanded`, `aria-hidden`, and `aria-pressed` on dynamic components are updated using explicit string values (`'true'`/`'false'`) when managed via JavaScript DOM manipulation.
