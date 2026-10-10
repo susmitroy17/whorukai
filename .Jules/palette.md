@@ -1,0 +1,4 @@
+
+## 2026-10-10 - Converting dynamic menu state to semantic button
+**Learning:** When converting `div` elements representing dynamic states (like a hamburger menu) to semantic `<button>` elements, simply changing the tag isn't enough. Screen readers need to understand the state of the menu it controls. We must ensure `aria-expanded` is updated programmatically between string values (`'true'` and `'false'`). Additionally, stripping default styles (`background: transparent; border: none;`) and adding explicit `:focus-visible` offset outlines using CSS variables is crucial to maintain both design integrity and keyboard accessibility.
+**Action:** When migrating interactive non-semantic elements to buttons in this vanilla HTML/CSS stack, ALWAYS implement `aria-expanded` toggling in the JS handlers, apply explicit button style resets, and define a custom `:focus-visible` state using `var(--accent)`.
