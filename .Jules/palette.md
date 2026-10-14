@@ -1,0 +1,3 @@
+## 2023-11-20 - Accessible Hamburger Menus
+**Learning:** When converting an existing hamburger menu `<div>` to a `<button>` for screen reader support and keyboard interaction, default browser button stylings (background, borders, and outlines) can visually break the existing UI while failing to provide adequate focus indicators if outline styles are carelessly stripped.
+**Action:** When updating elements to `<button>`, ensure default styles are stripped out with `background: transparent; border: none;` and explicitly implement a custom `:focus-visible` state using the site's design tokens (like `var(--accent)`) to preserve aesthetic alignment while satisfying WCAG focus visibility rules.
