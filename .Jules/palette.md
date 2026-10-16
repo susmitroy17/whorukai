@@ -1,0 +1,3 @@
+## 2024-11-20 - Semantic Hamburger Menu State
+**Learning:** When converting a custom `div`-based hamburger menu to a semantic `<button>`, dynamically managing `aria-expanded` is critical for ensuring screen readers accurately announce the menu's toggled state. Additionally, `outline-offset` provides a much cleaner visual indicator that doesn't overlap the lines inside the menu compared to basic outlines.
+**Action:** Always pair `aria-expanded` updates with JavaScript toggle logic, and explicitly strip `button` default styles to match the original design intent. Utilize `outline-offset` to keep custom focus indicators clear from interior element geometry.
