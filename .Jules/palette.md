@@ -1,0 +1,3 @@
+## 2026-10-20 - Converting hamburger menu `div` to `button`
+**Learning:** When converting interactive `div` elements (like a hamburger menu) to a semantic `<button>` for accessibility, default button styles (`background`, `border`, `outline`) must be explicitly stripped to maintain the visual design. If `outline: none;` is used, a custom `:focus-visible` state with `outline-offset` must be provided to ensure keyboard navigation visibility and avoid WCAG violations.
+**Action:** Always include `background: transparent; border: none; outline: none;` on the base class and implement a clear `:focus-visible` rule using existing CSS variables (e.g., `var(--accent)`) when converting non-semantic elements to buttons.
