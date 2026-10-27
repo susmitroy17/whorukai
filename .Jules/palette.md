@@ -1,0 +1,3 @@
+## 2026-10-27 - Semantic Hamburger Menus
+**Learning:** When converting dynamic menu states (e.g., hamburger menus) from generic elements (`div`) to semantic buttons (`<button>`), it is critical to explicitly reset default button styles (like `background` and `border`). Furthermore, managing accessibility requires dynamically toggling `aria-expanded` between string values (`'true'` and `'false'`) based on the menu state, and providing a custom `:focus-visible` style to ensure keyboard accessibility without violating WCAG standards.
+**Action:** Always use semantic elements like `<button>` for interactive controls. Apply default style resets and custom focus indicators. Ensure dynamic states like `aria-expanded` are properly synchronized in JS.
