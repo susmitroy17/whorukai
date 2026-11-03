@@ -1,0 +1,3 @@
+## 2024-11-03 - Semantic Buttons for Menus
+**Learning:** Generic `div` elements used as interactive menus lack built-in accessibility features, rendering them invisible to standard keyboard navigation without custom tabindex and event handling.
+**Action:** Always convert structural generic elements (`div`, `span`) to semantic `<button>` elements for interactive UI controls. Remember to explicitly strip default button styling (`background: transparent; border: none;`), implement proper `:focus-visible` states to preserve keyboard navigation, and dynamically manage `aria-expanded` states via JavaScript to ensure screen readers correctly interpret the element's status.
