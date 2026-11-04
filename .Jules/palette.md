@@ -1,0 +1,3 @@
+## 2024-11-04 - Semantic Hamburger Menu Accessibility
+**Learning:** When converting dynamic menu triggers like hamburger menus from `div` to `button` for accessibility, explicit removal of default button styles is required, along with a custom `:focus-visible` outline. Additionally, `aria-expanded` must be programmatically toggled between string values `'true'` and `'false'` for screen readers to accurately reflect the state.
+**Action:** Always use semantic `<button>` elements with `aria-expanded` for togglable menus, and ensure `:focus-visible` states are implemented when default outlines are removed.
