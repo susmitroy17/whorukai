@@ -1,0 +1,3 @@
+## 2025-01-24 - Hamburger Menu Semantic Conversion
+**Learning:** When converting a non-semantic `div` hamburger menu to a native `<button>` for keyboard accessibility, screen readers require dynamic `aria-expanded` attributes to properly communicate the menu state, and default button styling must be fully stripped to maintain the original visual design without breaking focus indicators.
+**Action:** Always map menu open/close JavaScript functions to toggle `aria-expanded` attributes on the triggering semantic button, and provide explicit `:focus-visible` styling with `outline-offset` if default outlines are removed.
