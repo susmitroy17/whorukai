@@ -1,0 +1,3 @@
+## 2025-05-15 - Dynamic Hamburger Menu Accessibility
+**Learning:** When converting a structural `div` to a `<button>` for a hamburger menu, managing the `aria-expanded` state correctly with strings ('true'/'false') in both toggle and close handlers is critical for screen reader synchronization. Also stripping default browser button styles is necessary to maintain visual integrity while keeping keyboard focus accessibility via a custom `:focus-visible` rule.
+**Action:** Always ensure dynamic menu elements use semantic `<button>` tags with synchronized `aria-expanded` attributes and custom focus outlines that account for outline-offset.
