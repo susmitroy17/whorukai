@@ -1,0 +1,3 @@
+## 2026-11-10 - Hamburger Menu Accessibility
+**Learning:** When converting a div-based hamburger menu to a semantic button for accessibility, default button styles must be explicitly stripped and a custom `:focus-visible` style provided to maintain keyboard accessibility and prevent WCAG violations. The `aria-expanded` attribute must also be programmatically toggled between 'true' and 'false' as strings to accurately reflect the menu's state to screen readers.
+**Action:** Always use a `<button>` element with `aria-expanded` and `aria-controls` attributes for interactive menus, strip default styles, and ensure custom `:focus-visible` states are defined. Programmatically update `aria-expanded` in JavaScript when the menu state changes.
