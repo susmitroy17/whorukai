@@ -1,0 +1,3 @@
+## 2024-10-24 - Interactive Divs Used As Buttons
+**Learning:** Found an accessibility issue pattern where dynamic interactive components (like the hamburger menu) are implemented as `div` elements without semantic meaning or keyboard focus states, causing them to be inaccessible to keyboard and screen reader users.
+**Action:** Always use semantic `<button>` elements for interactive triggers, explicitly strip default button styles, provide a high-contrast `:focus-visible` state using CSS variables (e.g., `var(--accent)`), and ensure dynamic states like `aria-expanded` are programmatically toggled for screen readers.
